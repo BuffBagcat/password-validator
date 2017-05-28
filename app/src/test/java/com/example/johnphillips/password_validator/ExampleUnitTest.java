@@ -72,5 +72,13 @@ public class ExampleUnitTest {
         assertTrue(!passwordMixed.toLowerCase().equals(passwordMixed)&&!passwordMixed.toUpperCase().equals(passwordMixed));
     }
 
-    
+    //check to make sure the password doesn't include semicolons or quotation marks
+    @Test
+    public void passwordSemicolon(){
+        String badPassword = "sqlinjection\";";
+        String goodPassword = "Nice######";
+
+        assertTrue(badPassword.contains(";")||badPassword.contains("\"")||badPassword.contains("\'"));
+        assertFalse(goodPassword.contains(";")||goodPassword.contains("\"")||goodPassword.contains("\'"));
+    }
 }
