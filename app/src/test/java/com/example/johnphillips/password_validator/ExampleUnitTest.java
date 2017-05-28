@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
 
-
+    //check that password is not "password", case insensitive
     @Test
     public void passwordIsPassword() {
         String password = "Password";
@@ -25,7 +25,7 @@ public class ExampleUnitTest {
         assertTrue(!containsPassword.toLowerCase().equals("password"));
     }
 
-
+    //check to see that the password is at LEAST 8 characters long
     @Test
     public void passwordLength() {
         String passwordShort = "abc123";
