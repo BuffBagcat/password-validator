@@ -52,7 +52,7 @@ public class ExampleUnitTest {
 
     //check to see if the password contains at least one number
     @Test
-    public void passwordHasLetter(){
+    public void passwordHasNumber(){
         String passwordCaps = "PASSWORD";
         String notPassword = "123456789";
 
